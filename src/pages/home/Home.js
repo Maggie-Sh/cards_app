@@ -14,7 +14,6 @@ import Card from "../../components/card/Card";
 
 const Home = () => {
   const cards = useSelector((state) => state.cards);
-  console.log(cards);
 
   return (
     <Container>

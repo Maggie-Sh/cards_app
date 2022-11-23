@@ -7,11 +7,9 @@ export const cardsSlice = createSlice({
   initialState,
   reducers: {
     addItem: (state, action) => {
-      console.log(action, "action", [...state, action.payload]);
       return [...state, action.payload];
     },
     deleteItem: (state, action) => {
-      console.log(action.payload);
       return state.filter((item) => item !== action.payload);
     },
     sortItems: (state) => {
