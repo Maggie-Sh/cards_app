@@ -50,4 +50,5 @@ export const EmptyCards = styled.p`
   font-size: 24px;
   font-weight: 700;
   text-align: center;
+  margin-top: 20px;
 `;

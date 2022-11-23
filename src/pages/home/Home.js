@@ -21,13 +21,15 @@ const Home = () => {
       <HomeContainer>
         <Header />
         <CardsContainer>
-          <Cards>
-            {!!cards?.length ? (
-              cards.map((num) => <Card key={num + Math.random()} num={num} />)
-            ) : (
-              <EmptyCards>Nothing to show...</EmptyCards>
-            )}
-          </Cards>
+          {cards?.length ? (
+            <Cards>
+              {cards.map((num) => (
+                <Card key={num + Math.random()} num={num} />
+              ))}
+            </Cards>
+          ) : (
+            <EmptyCards>Nothing to show...</EmptyCards>
+          )}
         </CardsContainer>
         <Footer />
       </HomeContainer>
