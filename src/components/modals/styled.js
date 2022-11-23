@@ -6,7 +6,7 @@ export const Background = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #000;
-  opacity: 50%;
+  opacity: 40%;
   z-index: 1;
 `;
 
@@ -23,6 +23,7 @@ export const Modal = styled.div`
   z-index: 2;
   @media (max-width: 768px) {
     max-width: 90%;
+    padding: 15px;
   }
 `;
 

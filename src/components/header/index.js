@@ -17,12 +17,21 @@ const Header = () => {
     dispatch(show());
   };
 
-  const handleAddItem = () => {
-    const arr = [10, 100, 1000];
-    const num = Math.floor(
-      Math.random() * arr[Math.floor(Math.random() * arr.length)]
+  const getRandomIndex = (arr) => {
+    return arr[Math.floor(Math.random() * arr.length)];
+  };
+
+  const getRandomNumber = () => {
+    const zeros = [10, 100, 1000];
+    const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    return Math.floor(
+      Math.random() * getRandomIndex(zeros) + getRandomIndex(digits)
     );
-    dispatch(addItem(num));
+  };
+
+  const handleAddItem = () => {
+    let num = getRandomNumber();
+    cards?.includes(num) ? getRandomNumber() : dispatch(addItem(num));
   };
 
   return (

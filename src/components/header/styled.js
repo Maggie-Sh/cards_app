@@ -8,7 +8,6 @@ export const CustomHeader = styled.header`
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 30px;
   @media (max-width: 768px) {
     padding: 20px 15px;
@@ -22,7 +21,6 @@ export const CustomHeader = styled.header`
 export const Button = styled.button`
   font-size: 18px;
   font-weight: 700;
-  color: #373e4b;
   text-transform: uppercase;
   position: relative;
   &::after {
@@ -51,6 +49,7 @@ export const Button = styled.button`
   }
   &.help-btn {
     display: none;
+    margin-left: auto;
   }
   @media (max-width: 768px) {
     font-size: 16px;

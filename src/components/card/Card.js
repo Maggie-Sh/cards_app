@@ -5,6 +5,7 @@ import DeleteModal from "../modals/DeleteModal";
 
 const Card = ({ num }) => {
   const [deletingItem, setDeletingItem] = useState(null);
+
   return (
     <>
       <CardWrapper>

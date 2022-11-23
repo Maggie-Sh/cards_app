@@ -7,7 +7,6 @@ export const CardWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #373e4b;
   font-size: 28px;
   font-weight: 500;
   box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);

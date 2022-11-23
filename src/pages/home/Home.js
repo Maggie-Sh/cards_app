@@ -6,7 +6,7 @@ import {
   HomeContainer,
   Cards,
   Container,
-  EmptyCards,
+  EmptyList,
   CardsContainer,
 } from "./styled";
 import { useSelector } from "react-redux";
@@ -23,11 +23,11 @@ const Home = () => {
           {cards?.length ? (
             <Cards>
               {cards.map((num) => (
-                <Card key={num + Math.random()} num={num} />
+                <Card key={num} num={num} />
               ))}
             </Cards>
           ) : (
-            <EmptyCards>Nothing to show...</EmptyCards>
+            <EmptyList>Nothing to show...</EmptyList>
           )}
         </CardsContainer>
         <Footer />

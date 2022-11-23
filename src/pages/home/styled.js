@@ -37,15 +37,13 @@ export const Cards = styled.div`
   gap: 20px;
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 45%);
-    gap: 40px;
   }
   @media (max-width: 420px) {
     grid-template-columns: repeat(1, 100%);
-    gap: 40px;
   }
 `;
 
-export const EmptyCards = styled.p`
+export const EmptyList = styled.p`
   color: #bababa;
   font-size: 24px;
   font-weight: 700;
