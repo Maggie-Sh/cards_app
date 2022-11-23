@@ -13,7 +13,7 @@ const Card = ({ num }) => {
         </IconButton>
         <p>{num}</p>
       </CardWrapper>
-      {deletingItem && (
+      {deletingItem !== null && (
         <DeleteModal num={num} handleClose={() => setDeletingItem(null)} />
       )}
     </>

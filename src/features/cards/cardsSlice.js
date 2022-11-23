@@ -11,6 +11,7 @@ export const cardsSlice = createSlice({
       return [...state, action.payload];
     },
     deleteItem: (state, action) => {
+      console.log(action.payload);
       return state.filter((item) => item !== action.payload);
     },
     sortItems: (state) => {
