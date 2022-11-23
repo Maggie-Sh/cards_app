@@ -44,7 +44,7 @@ const SideBar = () => {
   return (
     <SideBarContainerWrapper className={showSidebar && "show"}>
       <SideBarContainer>
-        <CloseButton title="close" onClick={handleHide}>
+        <CloseButton onClick={handleHide}>
           <img width="25" height="25" src={closeIcon} alt="x" />
         </CloseButton>
         <Heading>Hey there!</Heading>
