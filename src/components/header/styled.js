@@ -37,6 +37,13 @@ export const Button = styled.button`
     transform-origin: left;
     transition: all 200ms;
   }
+  &:disabled {
+    color: #bababa;
+    cursor: default;
+    &::after {
+      display: none;
+    }
+  }
   &:hover {
     &::after {
       transform: scale(1);

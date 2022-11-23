@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Header = () => {
   const dispatch = useDispatch();
   const showSidebar = useSelector((state) => state.showSidebar);
+  const cards = useSelector((state) => state.cards);
 
   const handleShowSidebar = () => {
     dispatch(show());
@@ -27,8 +28,12 @@ const Header = () => {
   return (
     <CustomHeader>
       <Button onClick={handleAddItem}>add item</Button>
-      <Button onClick={() => dispatch(sortItems())}>sort items</Button>
-      <Button onClick={() => dispatch(clearItems())}>refresh</Button>
+      <Button disabled={!cards?.length} onClick={() => dispatch(sortItems())}>
+        sort items
+      </Button>
+      <Button disabled={!cards?.length} onClick={() => dispatch(clearItems())}>
+        refresh
+      </Button>
       <Button
         className={`help-btn ${!showSidebar && "show"}`}
         onClick={handleShowSidebar}
