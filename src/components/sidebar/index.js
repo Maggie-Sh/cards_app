@@ -10,6 +10,7 @@ import {
   AccordionContent,
   CloseButton,
 } from "./styled";
+import { Background } from "../../shared/styled";
 import expandIcon from "../../assets/expandIcon.svg";
 import closeIcon from "../../assets/closeIcon.svg";
 import { useSelector, useDispatch } from "react-redux";
@@ -42,30 +43,36 @@ const SideBar = () => {
   };
 
   return (
-    <SideBarContainerWrapper className={showSidebar && "show"}>
-      <SideBarContainer>
-        <CloseButton onClick={handleHide}>
-          <img width="25" height="25" src={closeIcon} alt="x" />
-        </CloseButton>
-        <Heading>Hey there!</Heading>
-        <Typo className="text-center">
-          Here is a guide on how to manage the cards.
-        </Typo>
-        {actionsInfo.map((item) => (
-          <Accordion key={item.id}>
-            <AccordionTitle onClick={() => handleExpand(item.id)}>
-              {item.title}
-              <IconWrapper className={expanded === item.id && "expanded"}>
-                <img width="10" height="10" src={expandIcon} alt="" />
-              </IconWrapper>
-            </AccordionTitle>
-            <AccordionContent className={expanded === item.id && "expanded"}>
-              {item.description}
-            </AccordionContent>
-          </Accordion>
-        ))}
-      </SideBarContainer>
-    </SideBarContainerWrapper>
+    <>
+      <Background
+        className={`sidebar ${showSidebar && "show"}`}
+        onClick={handleHide}
+      />
+      <SideBarContainerWrapper className={showSidebar && "show"}>
+        <SideBarContainer>
+          <CloseButton onClick={handleHide}>
+            <img width="25" height="25" src={closeIcon} alt="x" />
+          </CloseButton>
+          <Heading>Hey there!</Heading>
+          <Typo className="text-center">
+            Here is a guide on how to manage the cards.
+          </Typo>
+          {actionsInfo.map((item) => (
+            <Accordion key={item.id}>
+              <AccordionTitle onClick={() => handleExpand(item.id)}>
+                {item.title}
+                <IconWrapper className={expanded === item.id && "expanded"}>
+                  <img width="10" height="10" src={expandIcon} alt="" />
+                </IconWrapper>
+              </AccordionTitle>
+              <AccordionContent className={expanded === item.id && "expanded"}>
+                {item.description}
+              </AccordionContent>
+            </Accordion>
+          ))}
+        </SideBarContainer>
+      </SideBarContainerWrapper>
+    </>
   );
 };
 

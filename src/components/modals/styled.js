@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const Background = styled.div`
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  opacity: 40%;
-  z-index: 1;
-`;
-
 export const Modal = styled.div`
   position: absolute;
   top: 50%;

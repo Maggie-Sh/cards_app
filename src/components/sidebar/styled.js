@@ -10,6 +10,7 @@ export const SideBarContainerWrapper = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1;
     width: 0;
     height: 0;
     transition: width 300ms ease-in;

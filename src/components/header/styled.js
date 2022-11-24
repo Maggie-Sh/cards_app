@@ -42,9 +42,11 @@ export const Button = styled.button`
       display: none;
     }
   }
-  &:hover {
-    &::after {
-      transform: scale(1);
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        transform: scale(1);
+      }
     }
   }
   &.help-btn {

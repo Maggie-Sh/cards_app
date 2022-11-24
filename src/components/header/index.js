@@ -1,11 +1,7 @@
 import React from "react";
 import { CustomHeader, Button } from "./styled";
 import { show } from "../../features/show-sidebar/showSidebarSlice";
-import {
-  addItem,
-  clearItems,
-  sortItems,
-} from "../../features/cards/cardsSlice";
+import { addItem, clearList, sortItems } from "../../features/cards/cardsSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Header = () => {
@@ -31,7 +27,10 @@ const Header = () => {
 
   const handleAddItem = () => {
     let num = getRandomNumber();
-    cards?.includes(num) ? getRandomNumber() : dispatch(addItem(num));
+    if (cards?.includes(num)) {
+      num = getRandomNumber();
+    }
+    dispatch(addItem(num));
   };
 
   return (
@@ -40,7 +39,7 @@ const Header = () => {
       <Button disabled={!cards?.length} onClick={() => dispatch(sortItems())}>
         sort items
       </Button>
-      <Button disabled={!cards?.length} onClick={() => dispatch(clearItems())}>
+      <Button disabled={!cards?.length} onClick={() => dispatch(clearList())}>
         refresh
       </Button>
       <Button

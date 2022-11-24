@@ -1,5 +1,6 @@
 import React from "react";
-import { Background, Modal, Title, Actions, TextButton } from "./styled";
+import { Modal, Title, Actions, TextButton } from "./styled";
+import { Background } from "../../shared/styled";
 import { deleteItem } from "../../features/cards/cardsSlice";
 import { useDispatch } from "react-redux";
 

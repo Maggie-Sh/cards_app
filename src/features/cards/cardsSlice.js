@@ -15,13 +15,12 @@ export const cardsSlice = createSlice({
     sortItems: (state) => {
       return state.sort((x, y) => x - y);
     },
-    clearItems: () => {
+    clearList: () => {
       return [];
     },
   },
 });
 
-export const { addItem, deleteItem, sortItems, clearItems } =
-  cardsSlice.actions;
+export const { addItem, deleteItem, sortItems, clearList } = cardsSlice.actions;
 
 export default cardsSlice.reducer;
