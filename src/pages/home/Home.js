@@ -19,6 +19,7 @@ const Home = () => {
     <Container>
       <HomeContainer>
         <Header />
+        <div>new edit</div>
         <CardsContainer>
           {cards?.length ? (
             <Cards>
