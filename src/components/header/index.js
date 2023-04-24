@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { CustomHeader, Button } from "./styled";
 import { show } from "../../features/show-sidebar/showSidebarSlice";
 import { addItem, clearList, sortItems } from "../../features/cards/cardsSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const Header = () => {
+const Header = ({ num }) => {
   const dispatch = useDispatch();
   const showSidebar = useSelector((state) => state.showSidebar);
   const cards = useSelector((state) => state.cards);
+  const [myNum, setMyNum] = useState(num);
+  console.log(num, num === myNum);
 
   const handleShowSidebar = () => {
     dispatch(show());
@@ -37,7 +39,9 @@ const Header = () => {
     <CustomHeader>
       <Button onClick={handleAddItem}>add item</Button>
       <Button disabled={!cards?.length} onClick={() => dispatch(sortItems())}>
-        sort items
+        {/* sort items */}
+        {myNum}
+        {num}
       </Button>
       <Button disabled={!cards?.length} onClick={() => dispatch(clearList())}>
         refresh
