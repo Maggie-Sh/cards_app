@@ -22,7 +22,9 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <Home />
+      {/* <Home /> */}
+      <div>i'm testing this</div>
+      <div> and checking</div>
     </ThemeContext.Provider>
   );
 }
