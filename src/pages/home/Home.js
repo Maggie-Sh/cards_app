@@ -27,7 +27,7 @@ const Home = () => {
               ))}
             </Cards>
           ) : (
-            <EmptyList>Nothing to show...</EmptyList>
+            <EmptyList>Nothing to show yet...</EmptyList>
           )}
         </CardsContainer>
         <Footer />
